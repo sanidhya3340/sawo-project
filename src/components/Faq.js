@@ -7,7 +7,8 @@ import Accordion from './Accordion'
 //	Faqdata import
 import faqdata from './FaqData'
 
-const Faq = () => {
+export default function Faq() {
+	console.log(faqdata)
 	useEffect(() => {
 		const acc = document.getElementsByClassName('accordion')
 		for (let i = 0; i < acc.length; i++) {
@@ -25,10 +26,10 @@ const Faq = () => {
 			})
 		}
 	})
-
+	// console.log(faqdata)
 	const half = Math.ceil(faqdata.length / 2)
-	const firstFaqdata = faqdata.splice(0, half)
-	const secondFaqdata = faqdata.splice(-half)
+	const firstFaqdata = faqdata.slice(0, half)
+	const secondFaqdata = faqdata.slice(-half)
 
 	return (
 		<div className="w-full relative">
@@ -43,13 +44,14 @@ const Faq = () => {
 
 			<div className="lg:flex visible">
 				<div className="lg:w-1/2">
+					{/* <p className="font-bold text-white">Sanidya</p> */}
 					{firstFaqdata.map(item => (
-						<Accordion heading={item.heading} text={item.text} />
+						<Accordion key={item.id} heading={item.heading} text={item.text} />
 					))}
 				</div>
 				<div className="lg:w-1/2">
 					{secondFaqdata.map(item => (
-						<Accordion heading={item.heading} text={item.text} />
+						<Accordion key={item.id} heading={item.heading} text={item.text} />
 					))}
 				</div>
 			</div>
@@ -133,5 +135,3 @@ const Faq = () => {
 		</div>
 	)
 }
-
-export default Faq
