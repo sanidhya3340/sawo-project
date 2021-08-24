@@ -1,0 +1,55 @@
+@media (max-width: 379px) {
+	span.terminal-end-after {
+		top: 4rem;
+	}
+}
+
+@media (max-width: 1065px) and (min-width: 1024px) {
+	span.terminal-end-after {
+		left: -48%;
+		top: 12rem;
+	}
+}
+/* Palak - backdrop to be changed*/
+.terminal {
+	background: #0a0a161e;
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+
+	border: 0.2px solid rgba(255, 255, 255, 0.185);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	/* width: 40.625rem; */
+}
+
+@media (min-width: 1065px) {
+	span.terminal-end-after {
+		left: -7%;
+	}
+}
+
+@media (max-width: 1024px) {
+	span.terminal-end-after {
+		left: -7%;
+	}
+}
+
+img.dashboard-img {
+	z-index: -20;
+	right: -9%;
+	top: -18%;
+}
+
+pre.terminal-code,
+.terminal-code > span {
+	font-family: 'PT Mono', monospace;
+	font-weight: 600;
+}
+
+span.terminal-end-after {
+	content: '';
+	position: absolute;
+	right: -10%;
+	width: 3.099rem;
+	height: 0.625rem;
+	background: #fcdc60;
+}

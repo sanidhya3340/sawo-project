@@ -1,0 +1,23 @@
+span.features-heading-end::after,
+span.terminal-end-after,
+span.cta-heading-end::after,
+span.footer-heading-end::after {
+	content: '';
+	position: absolute;
+	right: -10%;
+	width: 3.099rem;
+	height: 0.625rem;
+	background: #fcdc60;
+}
+
+span.features-heading-end::after,
+span.cta-heading-end::after,
+span.footer-heading-end::after {
+	top: 100%;
+}
+
+@media screen and (max-width: 1180px) and (min-width: 1024px) {
+	.features-card img {
+		top: -20%;
+	}
+}

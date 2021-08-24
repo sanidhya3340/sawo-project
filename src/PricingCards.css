@@ -1,0 +1,126 @@
+.plan-card {
+	box-shadow: 0px 0px 30px #00000029;
+	border-radius: 35px;
+}
+
+.plan-card-1 {
+	box-shadow: 5px 5px 10px #00000029;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.plan-card-2 {
+	box-shadow: 5px 5px 10px #00000029;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.plan-card-animate {
+	animation-name: move-card;
+	animation-duration: 0.5s;
+}
+
+.plan-card-animate-2 {
+	animation-name: move-card-2;
+	animation-duration: 0.5s;
+}
+
+.animate-text {
+	animation-name: text-1;
+	animation-duration: 0.5s;
+}
+
+.animate-text-2 {
+	animation-name: text-2;
+	animation-duration: 0.5s;
+}
+
+@keyframes move-card {
+	from {
+		transform: translateX(100px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes move-card-2 {
+	from {
+		transform: translateX(-100px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes text-1 {
+	from {
+		transform: translateX(200px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes text-2 {
+	from {
+		transform: translateX(-200px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.li-1::before,
+.li-2::before {
+	content: '';
+	position: absolute;
+	left: -1rem;
+	margin: 0;
+	padding: 36px 0 36px 84px;
+	list-style: none;
+	background-image: url('./img/tick2.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px;
+}
+
+.li-1::before {
+	top: -1.2rem;
+}
+
+.li-2::before {
+	top: 4.2rem;
+}
+
+@media screen and (max-width: 768px) {
+	.li-1::before,
+	.li-2::before {
+		background-size: 8px;
+		left: 1rem;
+	}
+
+	.li-1::before {
+		top: 17px;
+	}
+
+	.li-2::before {
+		top: 2.4rem;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.li-1::before,
+	.li-2::before {
+		background-size: 14px;
+		left: 0;
+	}
+
+	.li-1::before {
+		top: -1.5rem;
+	}
+
+	.li-2::before {
+		top: 2.7rem;
+	}
+}

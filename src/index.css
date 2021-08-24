@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	body {
+		@apply min-h-screen
+		overflow-x-hidden
+		text-black
+		dark:bg-sawo-dark dark:text-white
+		relative
+		box-border;
+	}
+
+	.nav-items > li {
+		@apply mx-6 md:mx-5 lg:mx-6 font-extrabold hover:text-secondary-color;
+	}
+
+	.btn {
+		@apply text-xl
+		text-black
+		rounded-lg
+		hover:bg-yellow-300
+		bg-secondary-color
+		text-center;
+	}
+
+	.secondary-btn {
+		@apply text-xl
+		text-black
+		rounded-lg
+		hover:bg-gray-300
+		bg-gray-200
+		text-gray-400
+		text-center;
+	}
+
+	.features-card {
+		@apply flex items-center md:items-start;
+	}
+
+	.features-card h1 {
+		@apply text-base md:text-sm lg:text-base font-gilroy font-extrabold mb-2;
+	}
+
+	.features-card p {
+		@apply font-medium leading-loose pr-8 text-[13px] md:text-[10px] lg:text-[13px] font-montserrat;
+	}
+	.features-card img {
+		@apply w-16 h-full md:w-20 lg:w-[91px] object-contain mr-5;
+	}
+
+	.logoImg {
+		@apply w-48 object-contain mr-5;
+	}
+
+	.toggle-card {
+		@apply w-[90px] h-[116px] md:w-[207px] md:h-[257px]  text-center flex flex-col  items-center shadow-3xl rounded-xl md:rounded-[38px] dark:bg-primary-color;
+	}
+
+	.toggle-card-text {
+		@apply w-full    px-[2px] md:px-1 text-center text-[7px] md:text-base max-h-full;
+	}
+
+	.toggle-card-body {
+		@apply flex flex-col items-center text-center;
+	}
+
+	.toggle-card-image {
+		@apply h-10 w-10 md:h-[60px] md:w-[60px] my-3 md:mt-8 md:mb-8 mr-0;
+	}
+
+	.terminal-buttons > span {
+		@apply mx-1 w-2 h-2 rounded-full;
+	}
+
+	.company-grid-item {
+		@apply h-28
+		border-t-[0.5px] border-l-[0.5px] 
+		md:h-48
+		border-brown-color
+		opacity-100
+		flex
+		justify-center
+		items-center
+		text-xs
+		md:text-2xl
+		relative overflow-hidden w-full;
+	}
+
+	.and-more {
+		@apply h-28
+		md:h-48
+		border-brown-color
+		flex
+		justify-center
+		items-center
+		text-xs
+		md:text-2xl
+	    relative overflow-hidden w-full;
+	}
+
+	.company-image {
+		@apply dark:invert object-contain w-11 h-6 sm:w-20 sm:h-20 md:w-40 md:h-40 filter brightness-0 saturate-100 hover:filter-none dark:hover:filter-none;
+	}
+
+	.social-media-icon {
+		@apply h-4 w-4 md:h-10 md:w-10 filter-svg dark:filter-none;
+	}
+
+	.quick-link {
+		@apply text-primary-color dark:text-white dark:text-opacity-50 hover:text-black dark:hover:text-white;
+	}
+
+	.carousel-item {
+		@apply absolute opacity-0;
+	}
+
+	.carousel-indicators {
+		@apply list-none m-0 p-0 absolute bottom-0 left-0 right-0 text-center z-10;
+	}
+
+	.carousel-control {
+		@apply hidden;
+	}
+
+	.carousel-bullet {
+		@apply cursor-pointer block text-4xl;
+	}
+
+	.mode {
+		@apply text-current text-base fill-current cursor-pointer w-4 h-4;
+	}
+
+	.accordion {
+		@apply text-xs md:text-base
+		font-montserrat font-bold
+		w-full
+		flex
+		justify-between
+		mt-5;
+	}
+
+	.expand-element {
+		@apply opacity-0
+		flex-col
+		py-0
+		px-4
+		font-montserrat font-medium
+		text-xs md:text-sm
+		bg-yellow-color bg-opacity-20
+		mt-3
+		w-full
+		max-h-0;
+	}
+
+	.faq-container {
+		@apply flex flex-col mb-14 items-center justify-between;
+	}
+}
+
+@layer utilities {
+	@variants dark {
+		.filter-svg {
+			filter: invert(1);
+		}
+	}
+}

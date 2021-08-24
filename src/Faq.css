@@ -1,0 +1,15 @@
+.accordion:after {
+	content: '+';
+	cursor: pointer;
+	font-size: 40px;
+	font-weight: lighter;
+}
+
+.active:after {
+	content: '\2212';
+}
+
+.faq-container,
+.expand-div {
+	min-height: 86px;
+}

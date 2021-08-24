@@ -1,0 +1,10 @@
+.husky
+.editorconfig
+.gitignore
+.prettierignore
+package-lock.json
+landingpage/dist
+*.eot
+*.woff
+*.woff2
+*.ttf

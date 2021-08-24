@@ -1,0 +1,63 @@
+.hero-text {
+	line-height: 1.07;
+}
+
+.typewriting {
+	box-sizing: border-box;
+	background-position: 0% 100%;
+	padding: 0 6px;
+	position: relative;
+	transition: background-position 1s;
+	height: 3.75rem;
+	line-height: 3.75rem;
+	vertical-align: middle;
+}
+
+.typewriting::after {
+	content: '';
+	display: block;
+	height: 1.25em;
+	position: absolute;
+	width: 2.5px;
+	bottom: 0;
+}
+
+.cursor-at-end::after {
+	background-color: #fcdc60;
+	animation: blink-cursor 0.7s step-end infinite;
+	right: 0;
+}
+
+.cursor-at-start::after {
+	background-color: #fcdc60;
+	left: 0;
+}
+
+span.highlight,
+span.highlight-dark {
+	background: linear-gradient(to left, rgb(0, 0, 0) 50%, transparent 50%);
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: 200%;
+	color: #fcdc60;
+	transition: background-position 0.7s ease;
+}
+
+span.highlight-dark {
+	background: linear-gradient(to left, rgb(255, 255, 255) 50%, transparent 50%);
+	background-position: 100% 100%;
+	background-size: 200%;
+}
+
+.no-blinking-cursor::after {
+	animation: none;
+}
+
+@keyframes blink-cursor {
+	0% {
+		background: #fcdc60;
+	}
+	50% {
+		background: transparent;
+	}
+}
